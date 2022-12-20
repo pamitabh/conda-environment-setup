@@ -1,0 +1,11 @@
+conda create -n r_env r-essentials r-base
+conda activate r_env
+
+conda config --env --add channels conda-forge
+conda config --env --set channel_priority strict
+
+<https://github.com/REditorSupport/vscode-R/wiki/Installation:-Linux>
+conda install r-languageserver
+conda install r-httpgd
+
+conda install r-ggridges r-islr

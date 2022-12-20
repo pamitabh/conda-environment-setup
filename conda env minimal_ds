@@ -1,0 +1,9 @@
+For reproducibility here is the setup of the minimal_ds environment in conda
+
+channel used is: conda-forge with channel priority set to strict
+
+conda create --name minimal_ds
+conda activate minimal_ds
+conda config --env --add channels conda-forge
+conda config --env --set channel_priority strict
+conda install numpy pandas jupyterlab seaborn scikit-learn matplotlib openpyxl

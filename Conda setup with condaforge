@@ -1,0 +1,35 @@
+#Install miniconda
+#source https://developers.google.com/earth-engine/guides/python_install-conda#linux_2
+
+#Download installer and run
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p
+rm ~/miniconda.sh
+
+#Check
+source $HOME/miniconda3/bin/activate
+conda --help
+
+#Append conda to $PATH
+xed ~/.bashrc
+
+# add path to conda
+export PATH="$HOME/miniconda3/bin:$PATH"
+#OR
+printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
+
+#Initialize conda
+conda init --help
+
+#restart shell
+
+#Add channel conda-forge to all envs
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
+#On linux prevent conda from loading up the base package as shell default
+
+conda config --set auto_activate_base false
+
+
+
