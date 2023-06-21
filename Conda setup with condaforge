@@ -23,13 +23,11 @@ conda init --help
 
 #restart shell
 
-#Add channel conda-forge to all envs
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-
 #On linux prevent conda from loading up the base package as shell default
-
 conda config --set auto_activate_base false
 
-
+#Set libmamba solver as default
+conda update -n base conda
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
 
