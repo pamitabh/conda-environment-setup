@@ -12,7 +12,7 @@ conda config --set solver libmamba
 
 conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
-conda install numpy opencv pandas scikit-image jupyterlab pillow seaborn tqdm plotly natsort xarray
+conda install numpy opencv pandas scikit-image jupyterlab pillow seaborn tqdm plotly natsort xarray napari
 
 #for updates:
 conda activate rplab_image_analysis
