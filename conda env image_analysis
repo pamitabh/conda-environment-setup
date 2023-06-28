@@ -4,6 +4,12 @@ channel used is: conda-forge with channel priority set to strict
 
 conda create --name image_analysis
 conda activate image_analysis
+
+#Set libmamba solver as default
+conda update -n base conda
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+
 conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install numpy opencv pandas scikit-image jupyterlab pillow seaborn tqdm plotly natsort xarray
